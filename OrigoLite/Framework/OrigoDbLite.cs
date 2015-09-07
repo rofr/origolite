@@ -39,7 +39,6 @@ namespace OrigoLite
             if (File.Exists(journalFile)) _system = Load(journalFile);
             else _system = new T();
             _journal = File.Create(journalFile, 4096, FileOptions.WriteThrough);
-            //_journal = File.Open(journalFile, FileMode.Append,FileAccess.Write, FileShare.None);
         }
 
         /// <summary>
